@@ -4,6 +4,25 @@ import string
 
 # mat = ['фак', 'сак', 'дик']
 
+# поидее должен отправлять сообщения пользователя в группу
+# API_TOKEN = 'BOT TOKEN HERE'
+# CHANNEL_ID = <CHANNEL ID HERE> # это должен быть int, например -1006666666666
+#
+# bot = Bot(token=API_TOKEN, parse_mode=types.ParseMode.HTML)
+#
+#
+# async def send_message(channel_id: int, text: str):
+#     await bot.send_message(channel_id, text)
+#
+#
+# async def main():
+#     await send_message(CHANNEL_ID, '<b>Hello!</b>')
+#
+#
+# if __name__ == '__main__':
+#     asyncio.run(main())
+
+
 # @dp.message_handler()
 async def echo_send(message: types.Message):
     await message.answer('ok')

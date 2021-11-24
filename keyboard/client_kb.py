@@ -1,9 +1,8 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 
 b1 = KeyboardButton('поделиться номером', request_contact=True)
-b2 = KeyboardButton('начать диалог')
-b4 = KeyboardButton('/перезвоните')
-b3 = KeyboardButton('/кнопка2')
+b2 = KeyboardButton('/специалисты')
+
 
 
 kb_client = ReplyKeyboardMarkup(resize_keyboard=True)

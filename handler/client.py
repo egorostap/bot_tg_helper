@@ -10,24 +10,18 @@ ans = 'Добрый день! Я помощник.\nЗадайте интере�
 # @dp.message_handler(commands=['start', 'help'])
 async def command_start(message : types.Message):
   await bot.send_message(message.from_user.id, ans, reply_markup=kb_client)
+  await message.delete()
 
 # команды
 # @dp.message_handler(commands=['перезвоните'])
 async def command_1(message : types.Message):
-  await bot.send_message(message.from_user.id, 'команда 1')
-
-# @dp.message_handler(commands=['связь со специалистом'])
-async def command_2(message : types.Message):
-  await bot.send_message(message.from_user.id, 'команда 2')
+  await bot.send_message(message.from_user.id, 'Список специалистов: ')
 
 
 # функция для передачи функций в другие файлы
 def registr_handlers_client(dp : Dispatcher):
   dp.register_message_handler(command_start, commands=['start', 'help'])
-  dp.register_message_handler(command_1, commands=['к1'])
-  dp.register_message_handler(command_2, commands=['к2'])
-
-
+  dp.register_message_handler(command_1, commands=['специалисты'])
 
 
 
